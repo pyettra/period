@@ -12,6 +12,12 @@
 		6C40661A22859D4800490640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C40661822859D4800490640 /* Main.storyboard */; };
 		6C40661C22859D4900490640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C40661B22859D4900490640 /* Assets.xcassets */; };
 		6C40661F22859D4900490640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C40661D22859D4900490640 /* LaunchScreen.storyboard */; };
+		6CE01E5B2285F03C0072494F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE01E5A2285F03C0072494F /* Question.swift */; };
+		6CE01E5D2285F0540072494F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE01E5C2285F0540072494F /* Model.swift */; };
+		6CE01E5F2285F31F0072494F /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE01E5E2285F31F0072494F /* QuestionViewController.swift */; };
+		6CE4BD0C229427FC00B5809A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4BD0B229427FC00B5809A /* ResultsViewController.swift */; };
+		6CE4BD0E229581F400B5809A /* ModelResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4BD0D229581F400B5809A /* ModelResult.swift */; };
+		6CE4BD10229585A500B5809A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4BD0F229585A500B5809A /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		6C40661B22859D4900490640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C40661E22859D4900490640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C40662022859D4900490640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CE01E5A2285F03C0072494F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6CE01E5C2285F0540072494F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6CE01E5E2285F31F0072494F /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6CE4BD0B229427FC00B5809A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		6CE4BD0D229581F400B5809A /* ModelResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResult.swift; sourceTree = "<group>"; };
+		6CE4BD0F229585A500B5809A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				6C40661B22859D4900490640 /* Assets.xcassets */,
 				6C40661D22859D4900490640 /* LaunchScreen.storyboard */,
 				6C40662022859D4900490640 /* Info.plist */,
+				6CE01E5A2285F03C0072494F /* Question.swift */,
+				6CE01E5C2285F0540072494F /* Model.swift */,
+				6CE01E5E2285F31F0072494F /* QuestionViewController.swift */,
+				6CE4BD0B229427FC00B5809A /* ResultsViewController.swift */,
+				6CE4BD0D229581F400B5809A /* ModelResult.swift */,
+				6CE4BD0F229585A500B5809A /* Result.swift */,
 			);
 			path = Period;
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE01E5B2285F03C0072494F /* Question.swift in Sources */,
+				6CE01E5F2285F31F0072494F /* QuestionViewController.swift in Sources */,
 				6C40661722859D4800490640 /* ViewController.swift in Sources */,
+				6CE4BD0E229581F400B5809A /* ModelResult.swift in Sources */,
 				6C40661522859D4800490640 /* AppDelegate.swift in Sources */,
+				6CE01E5D2285F0540072494F /* Model.swift in Sources */,
+				6CE4BD10229585A500B5809A /* Result.swift in Sources */,
+				6CE4BD0C229427FC00B5809A /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
