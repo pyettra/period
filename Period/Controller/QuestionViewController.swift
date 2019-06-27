@@ -9,22 +9,21 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-    @IBOutlet weak var questionLbl: UILabel!
+    @IBOutlet weak var questionTxt: UITextView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var questionBtn1: UIButton!
     @IBOutlet weak var questionBtn2: UIButton!
-    @IBOutlet weak var questionBtn3: UIButton!
-    @IBOutlet weak var questionBtn4: UIButton!
     @IBOutlet weak var explanationTxt: UITextView!
-    
-    
     @IBOutlet weak var tampon1: UIImageView!
     @IBOutlet weak var tampon2: UIImageView!
     @IBOutlet weak var tampon3: UIImageView!
     @IBOutlet weak var tampon4: UIImageView!
     @IBOutlet weak var tampon5: UIImageView!
     @IBOutlet weak var tampon6: UIImageView!
-    
+    @IBOutlet weak var tampon7: UIImageView!
+    @IBOutlet weak var tampon8: UIImageView!
+    @IBOutlet weak var tampon9: UIImageView!
+    @IBOutlet weak var nextBtn: UIButton!
     
     let questions = Model.instance.questions
     var countQuestion = 0
@@ -36,21 +35,22 @@ class QuestionViewController: UIViewController {
     func refreshInterface() {
         isTheEnd(questionOfTurn: countQuestion)
         
-        if countQuestion < 6 {
+        if countQuestion < 9 {
         
             let questionOfTurn = questions[countQuestion]
         
-            questionLbl.text = questionOfTurn.txt
+            questionTxt.text = questionOfTurn.txt
             questionBtn1.setTitle(questionOfTurn.answers[0], for: .normal)
             questionBtn2.setTitle(questionOfTurn.answers[1], for: .normal)
-            questionBtn3.setTitle(questionOfTurn.answers[2], for: .normal)
-            questionBtn4.setTitle(questionOfTurn.answers[3], for: .normal)
         
-            showTampons(questionOfTurn: countQuestion)
 
         }
         
         countQuestion = countQuestion + 1
+        
+        questionBtn1.isEnabled = true
+        questionBtn2.isEnabled = true
+        nextBtn.isEnabled = false
     }
     
     func refreshExplanation() {
@@ -58,7 +58,34 @@ class QuestionViewController: UIViewController {
         
         explanationTxt.text = explanationOfTurn
         
+        questionBtn1.isEnabled = false
+        questionBtn2.isEnabled = false
+        nextBtn.isEnabled = true
+        
         countExplanation = countExplanation + 1
+        
+        switch countExplanation {
+        case 1:
+            tampon1.image = UIImage(named: "tamponB")
+        case 2:
+            tampon2.image = UIImage(named: "tamponB")
+        case 3:
+            tampon3.image = UIImage(named: "tamponB")
+        case 4:
+            tampon4.image = UIImage(named: "tamponB")
+        case 5:
+            tampon5.image = UIImage(named: "tamponB")
+        case 6:
+            tampon6.image = UIImage(named: "tamponB")
+        case 7:
+            tampon7.image = UIImage(named: "tamponB")
+        case 8:
+            tampon8.image = UIImage(named: "tamponB")
+        case 9:
+            tampon9.image = UIImage(named: "tamponB")
+        default:
+            tampon1.image = UIImage(named: "tamponB")
+        }
     }
     
     func checkAnswer(idx: Int) {
@@ -68,11 +95,9 @@ class QuestionViewController: UIViewController {
             correct = correct + 1
         }
         
-        if countAnswer > 5 {
+        if countAnswer > 8 {
             questionBtn1.isEnabled = false
             questionBtn2.isEnabled = false
-            questionBtn3.isEnabled = false
-            questionBtn4.isEnabled = false
         }
         
         countAnswer = countAnswer + 1
@@ -87,18 +112,6 @@ class QuestionViewController: UIViewController {
         checkAnswer(idx: 1)
         refreshExplanation()
     }
-    
-    
-    @IBAction func choose3(_ sender: Any) {
-        checkAnswer(idx: 2)
-        refreshExplanation()
-    }
-    
-    @IBAction func choose4(_ sender: Any) {
-        checkAnswer(idx: 3)
-        refreshExplanation()
-    }
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,70 +132,47 @@ class QuestionViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "results") as! ResultsViewController
         vc.correct = correct
 
-        if questionOfTurn == 6 {
+        if questionOfTurn == 9 {
             self.present(vc, animated: true, completion: nil)
         }
     }
     
-    func showTampons(questionOfTurn: Int) {
-        switch questionOfTurn {
-        case 0:
-            tampon1.isHidden = false
-            tampon2.isHidden = true
-            tampon3.isHidden = true
-            tampon4.isHidden = true
-            tampon5.isHidden = true
-            tampon6.isHidden = true
-            
-        case 1:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = true
-            tampon4.isHidden = true
-            tampon5.isHidden = true
-            tampon6.isHidden = true
-        
-        case 2:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = false
-            tampon4.isHidden = true
-            tampon5.isHidden = true
-            tampon6.isHidden = true
-            
-        case 3:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = false
-            tampon4.isHidden = false
-            tampon5.isHidden = true
-            tampon6.isHidden = true
-            
-        case 4:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = false
-            tampon4.isHidden = false
-            tampon5.isHidden = false
-            tampon6.isHidden = true
-        
-        case 5:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = false
-            tampon4.isHidden = false
-            tampon5.isHidden = false
-            tampon6.isHidden = false
-            
-        default:
-            tampon1.isHidden = false
-            tampon2.isHidden = false
-            tampon3.isHidden = false
-            tampon4.isHidden = false
-            tampon5.isHidden = false
-            tampon6.isHidden = false
-        }
-        
-    }
+//    func showTampons(questionOfTurn: Int) {
+//        switch questionOfTurn {
+//        case 0:
+//            return
+//        case 1:
+//            tampon1.image = UIImage(named: "tamponB")
+//
+//        case 2:
+//            tampon2.image = UIImage(named: "tamponB")
+//
+//        case 3:
+//            tampon3.image = UIImage(named: "tamponB")
+//
+//        case 4:
+//            tampon4.image = UIImage(named: "tamponB")
+//
+//        case 5:
+//            tampon5.image = UIImage(named: "tamponB")
+//
+//        case 6:
+//            tampon6.image = UIImage(named: "tamponB")
+//
+//        case 7:
+//            tampon7.image = UIImage(named: "tamponB")
+//
+//        case 8:
+//            tampon8.image = UIImage(named: "tamponB")
+//
+//        case 9:
+//            tampon9.image = UIImage(named: "tamponB")
+//
+//        default:
+//            tampon1.image = UIImage(named: "tamponB")
+//
+//        }
+//
+//    }
 
 }

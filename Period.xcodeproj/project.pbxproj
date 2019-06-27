@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C1B0D6722C4F1B30054307A /* Period.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Period.entitlements; sourceTree = "<group>"; };
 		6C40661122859D4800490640 /* Period.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Period.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C40661422859D4800490640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C40661622859D4800490640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		6C40661322859D4800490640 /* Period */ = {
 			isa = PBXGroup;
 			children = (
+				6C1B0D6722C4F1B30054307A /* Period.entitlements */,
 				6C40661422859D4800490640 /* AppDelegate.swift */,
 				6C6B71CB229D5F8C00854465 /* Controller */,
 				6C6B71CC229D5FA800854465 /* View */,
@@ -138,6 +140,11 @@
 				TargetAttributes = {
 					6C40661022859D4800490640 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -337,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Period;
+				PRODUCT_BUNDLE_IDENTIFIER = br.pyettra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,7 +362,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Period;
+				PRODUCT_BUNDLE_IDENTIFIER = br.pyettra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
