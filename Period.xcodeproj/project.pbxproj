@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C1B0D6722C4F1B30054307A /* Period.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Period.entitlements; sourceTree = "<group>"; };
 		6C40661122859D4800490640 /* Period.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Period.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C40661422859D4800490640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C40661622859D4800490640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,20 +67,45 @@
 		6C40661322859D4800490640 /* Period */ = {
 			isa = PBXGroup;
 			children = (
+				6C1B0D6722C4F1B30054307A /* Period.entitlements */,
 				6C40661422859D4800490640 /* AppDelegate.swift */,
+				6C6B71CB229D5F8C00854465 /* Controller */,
+				6C6B71CC229D5FA800854465 /* View */,
+				6C40662022859D4900490640 /* Info.plist */,
+				6C6B71CD229D5FBA00854465 /* Model */,
+			);
+			path = Period;
+			sourceTree = "<group>";
+		};
+		6C6B71CB229D5F8C00854465 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				6C40661622859D4800490640 /* ViewController.swift */,
+				6CE01E5E2285F31F0072494F /* QuestionViewController.swift */,
+				6CE4BD0B229427FC00B5809A /* ResultsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C6B71CC229D5FA800854465 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				6C40661822859D4800490640 /* Main.storyboard */,
 				6C40661B22859D4900490640 /* Assets.xcassets */,
 				6C40661D22859D4900490640 /* LaunchScreen.storyboard */,
-				6C40662022859D4900490640 /* Info.plist */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C6B71CD229D5FBA00854465 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				6CE01E5A2285F03C0072494F /* Question.swift */,
 				6CE01E5C2285F0540072494F /* Model.swift */,
-				6CE01E5E2285F31F0072494F /* QuestionViewController.swift */,
-				6CE4BD0B229427FC00B5809A /* ResultsViewController.swift */,
 				6CE4BD0D229581F400B5809A /* ModelResult.swift */,
 				6CE4BD0F229585A500B5809A /* Result.swift */,
 			);
-			path = Period;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +140,11 @@
 				TargetAttributes = {
 					6C40661022859D4800490640 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -313,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Period;
+				PRODUCT_BUNDLE_IDENTIFIER = br.pyettra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,7 +362,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Period;
+				PRODUCT_BUNDLE_IDENTIFIER = br.pyettra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
